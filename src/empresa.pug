@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Empressa
+        link(href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap", rel="stylesheet")
+        link(href="./assets/style.styl", rel="stylesheet")
+    body
+
+        .enterprise
+            .enterprise__container
+                .enterprise__inner
+                    h2.enterprise__h1 Desde 1991, a Verginia tem mudado o tom da cidade.
+                    h3.enterprise__h2 Criamos tendências, entregamos sorrisos e construímos belas histórias.
+                    .enterprise__text 
+                        | O grupo Verginia atua como revenda e distribuidora de tintas, ferramentas e acessórios em Curitiba e 
+                        | região metropolitana. Temos orgulho da relação de respeito, confiança e dedicação que temos com 
+                        | nossos clientes e colaboradores.  Nosso compromisso é oferecer a melhor solução para você!
+
+                    .enterprise__one
+                        .enterprise__item
+                            .enterprise__figure.enterprise__figure--red
+                                .enterprise__image 
+                                    img(src="./assets/images/ico-cart.jpg", alt="Compre como quiser!")
+                                .enterprise__label 
+                            .enterprise__content
+                                h4.enterprise__h3.enterprise__h3--red Compre como quiser!
+                                p 
+                                    | Com mais de 27 lojas, centro de distribuição e sistema de entrega rápido na Verginia você 
+                                    | encontra os mais variados produtos, as melhores marcas, com os melhores preços e tudo a 
+                                    | pronta entrega.
+
+                                p 
+                                    | Compre pelo site, telefone e WhatsApp ou vá até uma de nossas lojas. Converse agora mesmo 
+                                    | com um de nossos especialistas.
+
+                        .enterprise__item
+                            .enterprise__figure.enterprise__figure--blue
+                                .enterprise__image 
+                                    img(src="./assets/images/ico-mission.jpg", alt="Nossa Misão")
+                                .enterprise__label 
+                            .enterprise__content
+                                h4.enterprise__h3.enterprise__h3--blue Nossa Missão
+                                p 
+                                    | Construir um mundo melhor mais colorido e cheio de vida! 
+
+                                p 
+                                    | Oferecer produtos e serviços de qualidade que valorizam e renovam ambientes.
+                    
+                    h2.enterprise__h1 Por que a Verginia?
+                    .enterprise__two
+                        .enterprise__item.enterprise__item--max
+                            .enterprise__figure.enterprise__figure--green
+                                .enterprise__image 
+                                    img(src="./assets/images/ico-help.jpg", alt="Cunsultoria e suporte técnico")
+                                .enterprise__label Consultoria e suporte técnico
+                            ul.enterprise__content.enterprise__content--list.enterprise__content--green
+                                li Dúvidas
+                                li Visitas na obra
+                                li Diagnóstico
+                                li Especificação de patologias e solução do sistema de pintura mais indicado para a obra.
+
+                        .enterprise__item.enterprise__item--max
+                            .enterprise__figure.enterprise__figure--orange
+                                .enterprise__image 
+                                    img(src="./assets/images/ico-price.jpg", alt="Preço e qualidade")
+                                .enterprise__label Preço e qualidade
+                            .enterprise__content.enterprise__content--down
+                                p Somo um dos maiores distribuidores e revendedores de tintas do país. Temos preços competitivos e produtos sempre à disposição.
+
+                        .enterprise__item.enterprise__item--max
+                            .enterprise__figure.enterprise__figure--blue
+                                .enterprise__image 
+                                    img(src="./assets/images/ico-box.jpg", alt="Venda Direta/Grande Volume")
+                                .enterprise__label Venda Direta/ Grande Volume
+                            ul.enterprise__content.enterprise__content--list.enterprise__content--blue
+                                li Atendimento exclusivo
+                                li Consultoria em obra
+                                li Produtos em estoque
+                                li Formas de pagamento e parcelamento
+                                
+                        .enterprise__item.enterprise__item--max
+                            .enterprise__figure.enterprise__figure--red
+                                .enterprise__image 
+                                    img(src="./assets/images/ico-timer.jpg", alt="Entrega rápida")
+                                .enterprise__label Entrega rápida
+                            .enterprise__content.enterprise__content--down
+                                p Entrega imediata para Curitiba e Região. Também enviamos para todo o Brasil.
+                                
+                    h2.enterprise__h1 Marcas
+                        span &
+                        | parceiros
+
+                    .enterprise__list.enterprise__list--brands
+                        each brand in brands
+                            a(href=brand.link, title=brand.name).enterprise__brand
+                                img(src=brand.image, alt=brand.name)
+                            
+                    h2.enterprise__h1 Alguns dos nossos clientes
+
+                    .enterprise__list.enterprise__list--customers
+                        each customer in customers
+                            a(href=customer.link, title=customer.name).enterprise__customer
+                                img(src=customer.image, alt=customer.name)
+
+                    h2.enterprise__h1 O que vamos pintar juntos hoje?
+                    h3.enterprise__h2 Verginia, a vida no seu tom.
