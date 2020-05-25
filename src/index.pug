@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Loja
+        link(href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap", rel="stylesheet")
+        link(href="./assets/style.styl", rel="stylesheet")
+    body
+    include includes/svg.pug
+
+    .pg-store
+        .pg-store__container
+            h3.pg-store__title Fale Conosco
+            .pg-store__contacts
+                a.pg-store__whatsapp(href="") 
+                    svg(class="ico", width="30", height="30")
+                        use(xlink:href="#biz-whatsapp")
+                a.pg-store__chat
+                    svg(class="ico", width="30", height="30")
+                        use(xlink:href="#biz-chat")
+                a.pg-store__facebook-messenger
+                    svg(class="ico", width="30", height="30")
+                        use(xlink:href="#biz-messenger")
+                a.pg-store__email
+                    svg(class="ico", width="30", height="30")
+                        use(xlink:href="#biz-email")
+            
+            h3.pg-store__title Nossas Lojas
+            button.pg-store__button Lojas perto de você
+
+            .pg-store__list
+                each store in stores
+                    article.pg-store__item
+                        .pg-store__header
+                            img(src=store.image, alt=store.name)
+                        .pg-store__main
+                            h4.pg-store__name= store.name
+                            span.pg-store__phone= store.phone
+                            span.pg-store__address= store.address
+                            a.pg-store__mailto(href="mailto:" + store.email)= store.email
+                            h5.pg-store__timer-title= store.timer_title
+                            .pg-store__timer!= store.timer
+                            .pg-store__social
+                                a.pg-store__whatsapp.pg-store__whatsapp--small(href="")
+                                    svg.ico(width="18", height="18")
+                                        use(xlink:href="#biz-whatsapp")
+
+                                a.pg-store__right.pg-store__right--small(href="")
+                                    svg.ico(width="18", height="18")
+                                        use(xlink:href="#biz-right")
+
+                                a.pg-store__email.pg-store__email--small(href="")
+                                    svg.ico(width="18", height="18")
+                                        use(xlink:href="#biz-email")

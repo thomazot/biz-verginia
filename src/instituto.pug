@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Instituto
+        link(href="./assets/style.styl", rel="stylesheet")
+        link(rel="stylesheet", href="https://unpkg.com/swiper/css/swiper.min.css")
+    body
+        .institute
+            .institute__container
+                .institute__one
+                    .institute__content
+                        h2.institute__h1 Democratizando arte e dando novos tons à vidas.
+                        h4.institute__h4 O Insittuto Verginia é uma iniciativa do grupo Verginia para levar mais cor à vida das pessoas e da sociedade como um todo!
+                        .institute__text
+                            p Fazemos parte de um movimento que valoriza artistas locais e cria possibilidades de transformação social!
+                            p Vamos colorir o mundo com nossa energia e força de vontade para fazer a diferença na vida das pessoas.
+
+                .institute__two
+                    .swiper-container
+                        .swiper-wrapper
+                            .swiper-slide
+                                img(src="./assets/images/banner-01.jpg", alt="Banner 01")
+                            .swiper-slide
+                                img(src="./assets/images/banner-02.jpg", alt="Banner 02")
+                        .swiper-button-prev
+                        .swiper-button-next
+
+                .institute__three
+                    .institute__content
+                        h4.institute__h4 Conheça nossos movimentos:
+
+                        .institute__articles
+                            each article in articles
+                                article.institute__article
+                                    .institute__figure
+                                        img(src=article.image, alt=article.title)
+                                    .institute__inner
+                                        h4.institute__h3= article.title
+                                            each ico in article.icons
+                                                img(src=ico, alt=article.title)
+                                        .institute__text!= article.description
+
+
+                        h3.institute__h3 Precisa de nossa ajuda e quer participar dos nossos projetos sociais?
+                        .institute__links
+                            .institute__link
+                                h5.institute__h5 Verginia + Cor
+                                a.institute__anchor(href="") Preencha o Formulário
+                            .institute__link
+                                h5.institute__h5 Projeto Fazendo Arte
+                                a.institute__anchor(href="") Preencha o Formulário
+                            .institute__link
+                                h5.institute__h5 Coleta Colorida
+                                a.institute__anchor(href="") Preencha o Formulário
+
+        script(src="https://unpkg.com/swiper/js/swiper.min.js")
+        script.
+            var mySwiper = new Swiper ('.swiper-container', {
+                loop: true,
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+            })

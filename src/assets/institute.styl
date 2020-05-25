@@ -1,0 +1,197 @@
+.institute
+    &__h1, &__h2, &__h3
+        font-weight: bold
+
+    &__h1, &__h2, &__h3, &__h4, &__h5
+        margin: 0
+        color: primary
+
+    &__h1
+        font-size: 35px
+        line-height: 1.1
+
+        @media (min-width: 992px)
+            font-size: 50px
+            line-height: 1.3
+
+    &__h2
+        font-size: 30px
+
+        @media (min-width: 992px)
+            font-size: 40px
+
+    &__h3
+        font-size: 25px
+
+        @media (min-width: 992px)
+            font-size: 30px
+
+    &__h4
+        margin: 20px 0
+        font-weight: light
+        font-size: 20px
+        line-height: 1.2
+
+        @media (min-width: 992px)
+            font-size: 33px
+
+    &__h5
+        font-weight: regular
+        font-size: 14px
+
+        @media (min-width: 992px)
+            font-size: 20px
+
+    &__text
+        margin: 0
+        padding: 15px 0
+        color: text
+        font-weight: regular
+        font-size: 14px
+
+        @media (min-width: 992px)
+            font-size: 16px
+
+        p
+            margin: 10px 0
+            line-height: 1.5
+
+        strong
+            color: primary
+            font-weight: bold
+
+    &__anchor
+        padding: 8px 15px
+        border-radius: 4px
+        background: chat
+        color: #fff
+        text-decoration: none
+        text-transform: uppercase
+        font-weight: bold
+        font-size: 14px
+        line-height: 1
+
+    &__container
+        margin: 0 auto
+        max-width: calc(100% - 30px)
+        width: viewport
+
+    &__one
+        display: flex
+        align-items: stretch
+
+        @media (min-width: 992px)
+            &:before
+                display: block
+                flex: 0 0 105px
+                margin-right: 85px
+                min-height: 505px
+                background-image: url('images/bg01.jpg')
+                background-size: cover
+                content: ''
+                object-fit: cover
+
+    &__content
+        .institute__one &
+            flex: 1
+            min-width: 0
+
+        > .institute__h3
+            margin: 60px 0 30px
+
+    &__two
+        padding: 40px 0
+
+        img
+            display: block
+            margin: 0 auto
+            max-width: 100%
+            object-fit: cover
+
+            @media (min-width: 992px)
+                max-width: calc(100% - 130px)
+
+        .swiper-slide
+            overflow: hidden
+
+        .swiper-button-next, .swiper-button-prev
+            width: 50px
+            height: 50px
+            border-radius: 4px
+            background: #fff
+
+            &:after
+                color: #58595b
+                font-size: 28px
+
+    &__three
+        display: flex
+        align-items: stretch
+
+        @media (min-width: 992px)
+            &:before
+                display: block
+                flex: 0 0 105px
+                margin-right: 85px
+                background-image: url('images/bg02.jpg')
+                background-size: cover
+                content: ''
+                object-fit: cover
+
+        .institute__content
+            padding-bottom: 40px
+
+    &__articles
+        @media (min-width: 768px)
+            display: flex
+            margin: -10px
+
+        @media (min-width: 992px)
+            flex-flow: column nowrap
+
+    &__article
+        .institute__text
+            padding: 0
+
+        @media (min-width: 768px)
+            flex: 1
+            padding: 10px
+            min-width: 0
+
+        @media (min-width: 992px)
+            display: flex
+            align-items: center
+
+    &__figure
+        @media (min-width: 992px)
+            flex: 0 1 290px
+            margin-right: 40px
+
+        img
+            width: 100%
+            object-fit: contain
+
+            @media (min-width: 992px)
+                height: 100%
+
+    &__inner
+        flex: 1
+        min-width: 0
+
+        .institute__h3
+            img
+                margin-left: 10px
+
+                &:first-child
+                    margin-left: 20px
+
+    &__links
+        @media (min-width: 768px)
+            display: flex
+            justify-content: space-between
+
+    &__link
+        text-align: center
+
+        .institute__h5
+            padding: 20px 0
