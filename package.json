@@ -4,7 +4,8 @@
     "main": "index.js",
     "license": "MIT",
     "scripts": {
-        "start": "parcel src/lojas.pug src/instituto.pug src/empresa.pug"
+        "start": "parcel src/lojas.pug src/instituto.pug src/empresa.pug",
+        "deploy": "parcel build src/lojas.pug src/instituto.pug src/empresa.pug --out-dir build --no-source-maps --no-minify"
     },
     "devDependencies": {
         "parcel-bundler": "^1.12.4",
